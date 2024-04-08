@@ -65,6 +65,7 @@
     bat
     # eza
     # fzf
+    # gh
     lazygit
     # oh-my-zsh
     # pure-prompt
@@ -140,13 +141,14 @@
 
     eza.enable = true;
     fzf.enable = true;
-    zoxide.enable = true;
+    gh.enable = true;
     tealdeer = {
       enable = true;
       settings = {
         updates.auto_update = true;
       };
     };
+    zoxide.enable = true;
 
     zsh = {
       enable = true;
