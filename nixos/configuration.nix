@@ -74,6 +74,14 @@
 
   # Add the rest of your current configuration
 
+  # Garbage Collector
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # Set your hostname
   networking.hostName = "zero";
 
