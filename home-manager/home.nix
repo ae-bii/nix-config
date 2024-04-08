@@ -93,6 +93,7 @@
 
     ## Text Editors
     kate
+    # vscode
 
     ## Development
     (python311.withPackages (p: with p; [
@@ -194,6 +195,10 @@
 	    vim.opt.softtabstop = 4
 	    vim.opt.shiftwidth = 4
       '';
+    };
+
+    vscode = {
+      enable = true;
     };
 
   };
