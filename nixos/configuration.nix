@@ -154,6 +154,20 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
+  # Set Environment Variables
+  environment.variables = {
+    EDITOR = "neovim";
+    TERMINAL = "kitty";
+  };
+  environment.sessionVariables = rec {
+    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+  };
+
+  # Shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   # Enable sudo
   security.sudo.enable = true;
 

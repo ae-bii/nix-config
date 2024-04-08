@@ -130,10 +130,11 @@
 
     git = {
       enable = true;
-      userName = "Anupam Bhakta";
+      userName = "ae-bii";
       userEmail = "anupambhakta1@gmail.com";
       extraConfig = {
         init.defaultBranch = "master";
+        credential.helper = "oauth";
       };
     };
 
@@ -156,9 +157,9 @@
         cat = "bat";
         ls = "eza";
         ll = "eza -l";
-        nixtest = "sudo nixos-rebuild test --flake .#anu@zero";
+        # nixtest = "sudo nixos-rebuild test --flake .#anu@zero";
         tldr = "tealdeer";
-        update = "sudo nixos-rebuild switch --flake .#anu@zero";
+        # update = "sudo nixos-rebuild switch --flake .#anu@zero";
       };
       history.size = 10000;
       history.path = "${config.xdg.dataHome}/zsh/history";
