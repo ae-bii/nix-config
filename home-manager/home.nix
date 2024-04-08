@@ -157,9 +157,9 @@
         cat = "bat";
         ls = "eza";
         ll = "eza -l";
-        # nixtest = "sudo nixos-rebuild test --flake .#anu@zero";
+        nixtest = "sudo nixos-rebuild test --flake /home/anu/nix-config#zero";
         tldr = "tealdeer";
-        # update = "sudo nixos-rebuild switch --flake .#anu@zero";
+        update = "sudo nixos-rebuild switch --flake /home/anu/nix-config#zero";
       };
       history.size = 10000;
       history.path = "${config.xdg.dataHome}/zsh/history";
