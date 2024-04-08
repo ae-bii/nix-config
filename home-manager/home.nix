@@ -157,6 +157,7 @@
 
       shellAliases = {
         cat = "bat";
+        lg = "lazygit";
         ls = "eza";
         ll = "eza -l";
         nixtest = "sudo nixos-rebuild test --flake /home/anu/nix-config#zero";
