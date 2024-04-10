@@ -132,6 +132,18 @@
   # Enable Graphics Drivers
   # services.xserver.videoDrivers = [ "nvidia" ];
 
+  # Enable dgpu control
+  services.supergfxd.enable = true;
+  systemd.services.supergfxd.path = [ pkgs.pciutils ];
+
+  # ASUS Control Center
+  services = {
+    asusd = {
+      enable = true;
+      enableUserService = true;
+    };
+  };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
