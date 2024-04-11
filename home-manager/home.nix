@@ -71,6 +71,7 @@
     # pure-prompt
     # starship
     # tealdeer
+    unzip
     # zoxide
 
     ## Terminals
