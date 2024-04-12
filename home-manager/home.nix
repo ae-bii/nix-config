@@ -97,6 +97,7 @@
     # vscode
 
     ## Development
+    gcc-unwrapped
     (python311.withPackages (p: with p; [
       dbus-python
     ]))
