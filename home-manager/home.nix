@@ -106,6 +106,7 @@
     python311Packages.black
     python311Packages.isort
     rustup
+    texlive.combined.scheme-full
 
     ## Version Control
     # git
