@@ -189,7 +189,16 @@
     neovim = {
       defaultEditor = true;
       enable = true;
+      viAlias = true;
       vimAlias = true;
+      vimdiffAlias = true;
+      plugins = with pkgs.vimPlugins; [
+        nvim-lspconfig
+        nvim-treesitter.withAllGrammars
+        plenary-nvim
+        catppuccin-nvim
+        mini-nvim
+      ];
       extraLuaConfig = ''
         vim.wo.number = true
         vim.wo.relativenumber = true
@@ -197,6 +206,9 @@
         vim.opt.tabstop = 4
 	    vim.opt.softtabstop = 4
 	    vim.opt.shiftwidth = 4
+
+        vim.o.termguicolors = true
+        vim.cmd('colorscheme catppuccin-mocha')
       '';
     };
 
