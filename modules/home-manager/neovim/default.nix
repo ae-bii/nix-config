@@ -6,7 +6,8 @@ in
 
 {
     imports = [
-        ./colorscheme.tex
+        ./colorscheme.nix
+	./options.nix
     ];
     programs.neovim = {
         enable = true;

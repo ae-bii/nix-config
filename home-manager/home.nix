@@ -12,12 +12,14 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    outputs.homeManagerModules.neovim
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    # ../modules/home-manager/neovim/default.nix
   ];
 
   nixpkgs = {
@@ -186,31 +188,31 @@
       '';
     };
 
-    neovim = {
-      defaultEditor = true;
-      enable = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-      plugins = with pkgs.vimPlugins; [
-        nvim-lspconfig
-        nvim-treesitter.withAllGrammars
-        plenary-nvim
-        catppuccin-nvim
-        mini-nvim
-      ];
-      extraLuaConfig = ''
-        vim.wo.number = true
-        vim.wo.relativenumber = true
-		vim.opt.expandtab = true
-        vim.opt.tabstop = 4
-	    vim.opt.softtabstop = 4
-	    vim.opt.shiftwidth = 4
-
-        vim.o.termguicolors = true
-        vim.cmd('colorscheme catppuccin-mocha')
-      '';
-    };
+#     neovim = {
+#       defaultEditor = true;
+#       enable = true;
+#       viAlias = true;
+#       vimAlias = true;
+#       vimdiffAlias = true;
+#       plugins = with pkgs.vimPlugins; [
+#         nvim-lspconfig
+#         nvim-treesitter.withAllGrammars
+#         plenary-nvim
+#         catppuccin-nvim
+#         mini-nvim
+#       ];
+#       extraLuaConfig = ''
+#         vim.wo.number = true
+#         vim.wo.relativenumber = true
+# 		vim.opt.expandtab = true
+#         vim.opt.tabstop = 4
+# 	    vim.opt.softtabstop = 4
+# 	    vim.opt.shiftwidth = 4
+#
+#         vim.o.termguicolors = true
+#         vim.cmd('colorscheme catppuccin-mocha')
+#       '';
+#     };
 
     vscode = {
       enable = true;

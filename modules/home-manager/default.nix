@@ -3,5 +3,5 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
-  # nvim = import ./neovim/default.nix;
+  neovim = import ./neovim/default.nix;
 }
