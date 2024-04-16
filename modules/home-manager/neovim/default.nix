@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ...}:
+{ config, pkgs, lib, ... }:
 
 let
     fromGitHub = import ../functions/fromGitHub.nix;
@@ -7,7 +7,7 @@ in
 {
     imports = [
         ./colorscheme.nix
-	./options.nix
+        ./options.nix
     ];
     programs.neovim = {
         enable = true;
