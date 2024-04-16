@@ -5,7 +5,7 @@
         starship.enable = true;
         eza.enable = true;
         fzf.enable = true;
-        gh.enable = true
+        gh.enable = true;
         tealdeer = {
             enable = true;
             settings = {
