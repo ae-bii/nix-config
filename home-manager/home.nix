@@ -12,7 +12,10 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    outputs.homeManagerModules.git
+    outputs.homeManagerModules.shell
     outputs.homeManagerModules.neovim
+
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -128,63 +131,6 @@
       settings = {
         enable_audio_bell = false;
       };
-    };
-
-    starship = {
-      enable = true;
-    };
-
-    git = {
-      enable = true;
-      userName = "ae-bii";
-      userEmail = "anupambhakta1@gmail.com";
-      extraConfig = {
-        init.defaultBranch = "master";
-        credential.helper = "oauth";
-      };
-    };
-
-    eza.enable = true;
-    fzf.enable = true;
-    gh.enable = true;
-    tealdeer = {
-      enable = true;
-      settings = {
-        updates.auto_update = true;
-      };
-    };
-    zoxide.enable = true;
-
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-      syntaxHighlighting.enable = true;
-
-      shellAliases = {
-        cat = "bat";
-        lg = "lazygit";
-        ls = "eza";
-        ll = "eza -l";
-        nixtest = "sudo nixos-rebuild test --flake /home/anu/nix-config#zero";
-        tldr = "tealdeer";
-        update = "sudo nixos-rebuild switch --flake /home/anu/nix-config#zero";
-      };
-      history.size = 10000;
-      history.path = "${config.xdg.dataHome}/zsh/history";
-
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" ];
-        theme = "";
-      };
-
-#        autoload -U promptinit; promptinit
-#        prompt pure
-
-
-      initExtra = ''
-        eval "$(zoxide init --cmd cd zsh)"
-      '';
     };
 
     vscode = {
