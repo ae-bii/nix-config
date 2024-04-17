@@ -7,6 +7,7 @@ in
 {
     imports = [
         ./colorscheme.nix
+	./keymaps.nix
         ./mini.nix
         ./options.nix
     ];
