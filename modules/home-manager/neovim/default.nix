@@ -7,6 +7,7 @@ in
 {
     imports = [
         ./colorscheme.nix
+        ./mini.nix
         ./options.nix
     ];
     programs.neovim = {
@@ -19,7 +20,6 @@ in
             nvim-lspconfig
             nvim-treesitter.withAllGrammars
             plenary-nvim
-            mini-nvim
             # Adding outside plugins
             # (fromGitHub "HEAD" "elihunter173/dirbuf.nvim")
       ];
