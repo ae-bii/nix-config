@@ -14,6 +14,7 @@
     # outputs.homeManagerModules.example
     outputs.homeManagerModules.git
     outputs.homeManagerModules.shell
+    outputs.homeManagerModules.tmux
     outputs.homeManagerModules.neovim
 
 
