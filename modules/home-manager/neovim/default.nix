@@ -18,6 +18,7 @@ in
             autopep8
             black
             isort
+            flake8
             dbus-python
             pynvim
         ]))
@@ -33,7 +34,6 @@ in
         vimdiffAlias = true;
         coc.enable = false;
         extraPackages = with pkgs; [
-            python311Packages.flake8
             tree-sitter
             fzf
             gcc
