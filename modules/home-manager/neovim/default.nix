@@ -7,8 +7,7 @@ in
 {
     # Development
     home.packages = with pkgs; [
-        libgcc
-        go
+        gcc
         lua
         lua52Packages.jsregexp
         stylua
