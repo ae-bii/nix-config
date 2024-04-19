@@ -615,6 +615,9 @@ require("lazy").setup({
 			--     end,
 			--  },
 			-- }
+			local lspconfig = require("lspconfig")
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.ruff_lsp.setup({ capabilities = capabilities })
 		end,
 	},
 

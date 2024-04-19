@@ -12,7 +12,6 @@ in
         lua52Packages.jsregexp
         stylua
         nodejs-slim_21
-        ruff
         (python311.withPackages (p: with p; [
             pip
             autopep8
@@ -39,6 +38,9 @@ in
             gcc
             gnumake
             wget
+
+            lua-language-server
+            ruff-lsp
         ];
     };
 
