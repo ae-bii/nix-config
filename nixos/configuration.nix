@@ -188,6 +188,9 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
+  # Enable LD
+  programs.nix-ld.enable = true;
+
   # Enable sudo
   security.sudo.enable = true;
 
