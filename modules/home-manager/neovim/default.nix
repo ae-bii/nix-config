@@ -2,11 +2,6 @@
 
 let
     fromGitHub = import ../functions/fromGitHub.nix;
-
-    #treesitter-parsers = pkgs.symlinkJoin {
-    #    name = "treesitter-parsers";
-    #    paths = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
-    #};
 in
 
 {
@@ -24,13 +19,6 @@ in
             gnumake
             wget
         ];
-        #plugins = with pkgs.vimPlugins; [
-            # nvim-lspconfig
-            # nvim-treesitter.withAllGrammars
-            # plenary-nvim
-            # Adding outside plugins
-            # (fromGitHub "HEAD" "elihunter173/dirbuf.nvim")
-      #];
     };
 
     home.file = {
@@ -38,16 +26,5 @@ in
             source= ./nvim;
             recursive = true;
         };
-
-        #"./.config/nvim/lua/config/init.lua" = {
-        #    text = ''
-        #        vim.opt.runtimepath:append("${treesitter-parsers}")
-        #    '' + (builtins.readFile ./init.lua);
-        #};
-
-        #"./.local/share/nvim/nix/nvim-treesitter/" = {
-        #    recursive = true;
-        #    source = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
-        #};
     };
 }
