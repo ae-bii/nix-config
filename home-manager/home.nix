@@ -69,6 +69,7 @@
     ## Shell Level Up
     bat
     # eza
+    fd
     # fzf
     # gh
     lazygit
