@@ -103,20 +103,23 @@
     # vscode
 
     ## Development
-    gcc-unwrapped
-    go
-    lua
-    lua54Packages.jsregexp
-    nodejs_21
-    (python311.withPackages (p: with p; [
-      dbus-python
-    ]))
-    python311Packages.pip
-    python311Packages.autopep8
-    python311Packages.black
-    python311Packages.isort
-    rustup
-    texlive.combined.scheme-full
+    # gcc-unwrapped
+    # go
+    # lua
+    # lua54Packages.jsregexp
+    # stylua
+    # nodejs_21
+    # (python311.withPackages (p: with p; [
+    #   pip
+    #   autopep8
+    #   black
+    #   isort
+    #   dbus-python
+    #   pynvim
+    # ]))
+    # prettierd
+    # rustup
+    # texlive.combined.scheme-full
 
     ## Version Control
     # git
