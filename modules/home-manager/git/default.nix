@@ -7,7 +7,6 @@
         userEmail = "anupambhakta1@gmail.com";
         extraConfig = {
             init.defaultBranch = "master";
-            credential.helper = "oauth";
         };
     };
 }
