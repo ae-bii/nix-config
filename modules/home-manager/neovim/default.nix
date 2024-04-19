@@ -10,12 +10,6 @@ let
 in
 
 {
-    #imports = [
-    #    ./colorscheme.nix
-    #    ./keymaps.nix
-    #    ./mini.nix
-    #    ./options.nix
-    #];
     programs.neovim = {
         enable = true;
         defaultEditor = true;
