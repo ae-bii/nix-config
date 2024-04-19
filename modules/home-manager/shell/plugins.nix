@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+    home.packages = with pkgs; [
+        binutils
+        fd
+    ];
     programs = {
         starship.enable = true;
         eza.enable = true;

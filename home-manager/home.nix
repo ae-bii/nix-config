@@ -69,7 +69,7 @@
     ## Shell Level Up
     bat
     # eza
-    fd
+    # fd
     # fzf
     # gh
     lazygit
@@ -104,6 +104,10 @@
 
     ## Development
     gcc-unwrapped
+    go
+    lua
+    lua54Packages.jsregexp
+    nodejs_21
     (python311.withPackages (p: with p; [
       dbus-python
     ]))
