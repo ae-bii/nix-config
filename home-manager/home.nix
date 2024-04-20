@@ -12,9 +12,10 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
-    outputs.homeManagerModules.git
-    outputs.homeManagerModules.shell
     outputs.homeManagerModules.tmux
+    outputs.homeManagerModules.git
+
+    outputs.homeManagerModules.shell
     outputs.homeManagerModules.neovim
 
 
