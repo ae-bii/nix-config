@@ -126,6 +126,7 @@
     # git
 
     ## Diagnostics
+    activitywatch
     btop
 
     ## Misc
