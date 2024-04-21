@@ -43,6 +43,7 @@ require("lazy").setup({
 	-- require 'config/plugins/lint',
 	require("config/plugins/autopairs"),
 	-- require 'config/plugins/neo-tree',
+	require("config/plugins/oil"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
