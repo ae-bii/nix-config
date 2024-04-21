@@ -354,11 +354,6 @@ require("lazy").setup({
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			-- Automatically install LSPs and related tools to stdpath for Neovim
-			-- { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-			-- 'williamboman/mason-lspconfig.nvim',
-			-- 'WhoIsSethDaniel/mason-tool-installer.nvim',
-
 			-- Useful status updates for LSP.
 			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 			{ "j-hui/fidget.nvim", opts = {} },
@@ -601,8 +596,7 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
+				python = { "ruff" },
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
