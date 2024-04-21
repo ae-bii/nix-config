@@ -15,9 +15,6 @@ in
         (python311.withPackages (p: with p; [
             pip
             autopep8
-            black
-            isort
-            flake8
             dbus-python
             pynvim
         ]))
@@ -40,6 +37,7 @@ in
             wget
 
             lua-language-server
+            pyright
             ruff-lsp
         ];
     };

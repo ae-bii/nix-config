@@ -544,23 +544,33 @@ require("lazy").setup({
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
 			})
-			-- require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-			-- require('mason-lspconfig').setup {
-			--   handlers = {
-			--     function(server_name)
-			--       local server = servers[server_name] or {}
-			--       -- This handles overriding only values explicitly passed
-			--       -- by the server configuration above. Useful when disabling
-			--       -- certain features of an LSP (for example, turning off formatting for tsserver)
-			--       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-			--       require('lspconfig')[server_name].setup(server)
-			--     end,
-			--  },
-			-- }
+			-- Import the needed LSPs
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.ruff_lsp.setup({ capabilities = capabilities })
+
+			local on_attach = function(client, bufnr)
+				if client.name == "ruff_lsp" then
+					-- Disable hover in favor of Pyright
+					client.server_capabilities.hoverProvider = false
+				end
+			end
+			lspconfig.ruff_lsp.setup({ capabilities = capabilities, on_attach = on_attach })
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				settings = {
+					pyright = {
+						-- Using Ruff's import organizer
+						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							-- Ignore all files for analysis to exclusively use Ruff for linting
+							ignore = { "*" },
+						},
+					},
+				},
+			})
 		end,
 	},
 
