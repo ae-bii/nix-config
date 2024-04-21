@@ -39,6 +39,8 @@ in
             lua-language-server
             pyright
             ruff-lsp
+
+            texlab
         ];
     };
 

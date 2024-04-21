@@ -129,6 +129,9 @@
     activitywatch
     btop
 
+    ## Utilities
+    zathura
+
     ## Misc
     neofetch
 

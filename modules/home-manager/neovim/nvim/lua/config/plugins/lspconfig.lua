@@ -214,6 +214,7 @@ return {
 					},
 				},
 			})
+			lspconfig.texlab.setup({ capabilities = capabilities })
 		end,
 	},
 }
