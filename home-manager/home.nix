@@ -142,6 +142,10 @@
     kitty = {
       enable = true;
       theme = "Catppuccin-Mocha";
+      font = {
+        name = "FiraCode Nerd Font Mono";
+        size = 11;
+      };
       settings = {
         enable_audio_bell = false;
       };
