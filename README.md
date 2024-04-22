@@ -1,4 +1,4 @@
-# Anu's NixOS Configuration
+# anu's NixOS Configuration
 
 ## Install
 ```bash
