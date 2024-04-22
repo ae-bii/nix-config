@@ -5,6 +5,7 @@
     # my-module = import ./my-module.nix;
     git = import ./git/default.nix;
     tmux = import ./tmux.nix;
+    zellij = import ./zellij.nix;
 
     neovim = import ./neovim/default.nix;
     shell = import ./shell/default.nix;
