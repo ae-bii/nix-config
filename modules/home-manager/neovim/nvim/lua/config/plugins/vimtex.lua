@@ -13,6 +13,7 @@ return {
 			g.vimtex_view_skim_activate = 1
 			g.vimtex_compiler_method = "latexmk"
 			g.vimtex_mappings_enabled = true
+			g.vimtex_syntax_enabled = 0
 			-- Do not auto open quickfix on compile errors
 			g.vimtex_quickfix_mode = 0
 			-- vimtex toc options
