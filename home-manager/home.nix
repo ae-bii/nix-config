@@ -130,7 +130,7 @@
     btop
 
     ## Utilities
-    zathura
+    # zathura
 
     ## Misc
     neofetch
@@ -149,6 +149,18 @@
 
     vscode = {
       enable = true;
+    };
+
+    zathura = {
+      enable = true;
+      extraConfig = ''
+        set selection-clipboard clipboard
+        set guioptions ""
+
+        map D set "first-page-column 1:1"
+        map <C-d> set "first-page-column 1:2"
+        map t toggle_statusbar
+        '';
     };
 
   };
