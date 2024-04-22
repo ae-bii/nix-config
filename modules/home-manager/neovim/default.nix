@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ outputs, config, pkgs, lib, ... }:
 
 let
     fromGitHub = import ../functions/fromGitHub.nix;
@@ -24,6 +24,7 @@ in
 
     programs.neovim = {
         enable = true;
+        package = pkgs.neovim-nightly;
         defaultEditor = true;
         viAlias = true;
         vimAlias = true;
