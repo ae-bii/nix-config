@@ -23,7 +23,7 @@
 
         oh-my-zsh = {
             enable = true;
-            plugins = [ "git" "tmux" ];
+            plugins = [ "colored-man-pages" "git" "tmux" ];
             theme = "";
         };
 
