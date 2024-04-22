@@ -5,6 +5,9 @@ local header = {
 	"",
 	"",
 	"",
+	"",
+	"",
+	"",
 	"      |\\      _,,,---,,_",
 	"ZZZzz /,`.-'`'    -.  ;-;;,_",
 	"     |,4-  ) )-,_. ,\\ (  `'-'",
@@ -67,13 +70,13 @@ return {
 		},
 		config = function()
 			local alpha = require("alpha")
-			local alpha_th = require("alpha.themes.theta")
+			-- local alpha_th = require("alpha.themes.theta")
 			local alpha_db = require("alpha.themes.dashboard")
 			local alpha_time = tostring(os.date("%A %I:%M %p"))
 
 			-- Set header
-			alpha_th.header.val = header
-			alpha_th.buttons.val = {
+			alpha_db.section.header.val = header
+			alpha_db.section.buttons.val = {
 				{
 					type = "text",
 					val = "╭" .. string.rep("─", 48 - string.len(alpha_time)) .. alpha_time .. "╮",
@@ -93,7 +96,7 @@ return {
 			}
 
 			-- Send config to alpha
-			alpha.setup(alpha_th.config)
+			alpha.setup(alpha_db.config)
 		end,
 	},
 }
