@@ -96,6 +96,7 @@
     ## Messaging / Social
     discord-canary
     slack
+    zoom-us
 
     ## Music
     spotify
