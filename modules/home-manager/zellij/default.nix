@@ -7,8 +7,9 @@
     };
 
     home.file = {
-        "./.config/zellij/config.kdl" = {
-            source= ./config.kdl;
+        "./.config/zellij/" = {
+            source= ./configs;
+            recursive = true;
         };
     };
 }
