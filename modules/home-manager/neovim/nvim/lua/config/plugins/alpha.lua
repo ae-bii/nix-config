@@ -64,8 +64,8 @@ local icons = {
 return {
 	{
 		"goolord/alpha-nvim",
-		requires = {
-			"kyazdani42/nvim-web-devicons",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
 			"nvim-lua/plenary.nvim",
 		},
 		config = function()
