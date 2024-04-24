@@ -8,7 +8,7 @@
       xwayland.enable = true;
     };
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs.unstable; [
       waybar
       (waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
@@ -27,8 +27,11 @@
       # app launcher
       # wmctrl
       # rofi-wayland
-      unstable.fuzzel
-      unstable.tofi
+      fuzzel
+      # tofi
+
+      # Wireless
+      overskride
     ];
 
     environment.sessionVariables = {

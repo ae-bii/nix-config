@@ -1,247 +1,239 @@
+@import "mocha.css";
+
+@define-color bg rgba(4, 20, 45, 0.50);
+@define-color bg-alt #252428;
+@define-color fg #f5f5f5;
+@define-color alert #f53c3c;
+@define-color disabled #a5a5a5;
+@define-color oldbordercolor #29c8e5;
+@define-color bordercolor #777;
+@define-color highlight #FBD47F;
+@define-color activegreen #8fb666;
+
 * {
-	border: none;
-	border-radius: 10;
-	font-family: "Fira Code Nerd Font" ;
-	font-size: 15px;
-	min-height: 10px;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", FontAwesome, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  /* background-color: #04142d; */
 }
 
 window#waybar {
-	background: transparent;
+  color: #f5f5f5;
+  background: #111;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border: 2px solid @bordercolor;
 }
 
-window#waybar.hidden {
-	opacity: 0.2;
+window#waybar.empty {
+  opacity: 0.3;
 }
 
-#window {
-	margin-top: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-    color: transparent;
-	background: transparent;
-}
-#tags {
-	margin-top: 6px;
-	margin-left: 12px;
-	font-size: 4px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	background: #161320;
-	transition: none;
+/* .modules-left { */
+/*   background: @bg; */
+/*   border: 2px solid @bordercolor; */
+/*   border-radius: 20px; */
+/**/
+/*   padding-right: 5px; */
+/*   padding-left: 5px; */
+/* } */
+/**/
+/* .modules-right { */
+/*   background: @bg; */
+/*   border: 2px solid @bordercolor; */
+/* border-radius: 20px; */
+/**/
+/*   padding-right: 5px; */
+/*   padding-left: 5px; */
+/* } */
+/**/
+/* .modules-center { */
+/*   background: @bg; */
+/*   border: 2px solid @bordercolor; */
+/* border-radius: 20px; */
+/**/
+/*   padding-right: 5px; */
+/*   padding-left: 5px; */
+/* } */
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
 }
 
-#tags button {
-	transition: none;
-	color: #B5E8E0;
-	background: transparent;
-	font-size: 16px;
-	border-radius: 2px;
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px transparent;
 }
 
-#tags button.occupied {
-	transition: none;
-	color: #F28FAD;
-	background: transparent;
-	font-size: 4px;
+#workspaces button {
+  /* background-color: #252428; */
+  color: @fg;
 }
 
-#tags button.focused {
-	color: #ABE9B3;
-    border-top: 2px solid #ABE9B3;
-    border-bottom: 2px solid #ABE9B3;
+#workspaces button.urgent {
+  color: @alert;
+  /* background-color: #252428; */
+  /* border: 3px solid #f53c3c; */
+}
+#workspaces button.empty {
+  color: @disabled;
+  /* background-color: #252428; */
 }
 
-#tags button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-    border-color: #E8A2AF;
-    color: #E8A2AF;
+#workspaces button.active {
+  color: @activegreen;
+  /* background-color: #252428; */
+  /* border: 3px solid #7bcbd5; */
 }
 
-#tags button.focused:hover {
-    color: #E8A2AF;
+#workspaces button.focused {
+  background-color: @fg;
+  color: @bg-alt;
 }
 
-#network {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #bd93f9;
-}
+/* Uncomment If using icons instead of number for workspaces*/
 
-#pulseaudio {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #1A1826;
-	background: #FAE3B0;
-}
+/* #workspaces, */
+/* #workspaces button,  */
+/* #workspaces button.active, */
+/* #workspaces button:hover,  */
+/* #workspaces button.focused, */
+/* #workspaces button.urgent { */
+/*     padding-right: 0px;  */
+/*     padding: 0px 6px;  */
+/*     padding-left: 3px; */
+/*     color: #F5F5F5; */
+/*     background-color: rgba(0, 0, 0, 0); */
+/* }  */
 
-#battery {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #B5E8E0;
-}
-
-#battery.charging, #battery.plugged {
-	color: #161320;
-    background-color: #B5E8E0;
-}
-
-#battery.critical:not(.charging) {
-    background-color: #B5E8E0;
-    color: #161320;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        background-color: #BF616A;
-        color: #B5E8E0;
-    }
-}
-
-#backlight {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
-}
-#clock {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #ABE9B3;
-	/*background: #1A1826;*/
-}
-
-#memory {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #DDB6F2;
-}
-#cpu {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #96CDFB;
-}
-
-#tray {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #B5E8E0;
-	background: #161320;
-}
-
-#custom-launcher {
-	font-size: 24px;
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	border-radius: 10px;
-	transition: none;
-    color: #89DCEB;
-    background: #161320;
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#pulseaudio.muted,
+#wireplumber,
+#custom-media,
+#taskbar,
+#tray,
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#custom-power,
+#mpd {
+  padding: 0px 5px;
+  padding-right: 10px;
+  margin: 3px 3px;
+  color: @fg;
+  /* background-color: #252428; */
 }
 
 #custom-power {
-	font-size: 20px;
-	margin-top: 6px;
-	margin-left: 8px;
-	margin-right: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F28FAD;
+  color: #5cc084;
+  padding-left: 10px;
+}
+#custom-separator {
+  color: @disabled;
 }
 
-#custom-wallpaper {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #C9CBFF;
+#cpu {
+  color: #cb221b;
 }
 
-#custom-updates {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #E8A2AF;
+#temperature {
+  color: #d55c0d;
 }
 
-#custom-media {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F2CDCD;
+#memory {
+  color: #679c68;
+}
+
+#disk {
+  color: #979618;
+}
+
+#backlight {
+  color: #d69821;
+}
+
+#pulseaudio {
+  color: #448486;
+}
+
+#clock {
+  color: #b16186;
+}
+
+#battery {
+  color: #48aa4c;
+}
+
+#network {
+  color: #5cc084;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#network.disconnected {
+  background-color: @alert;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #f5f5f5;
+  background-color: #26a65b;
+}
+
+#wireplumber.muted {
+  background-color: @alert;
+}
+
+#language {
+  background: @fg;
+  color: @bg-alt;
+  padding: 0 5px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+@keyframes blink {
+  to {
+    background-color: @fg;
+    color: @bg-alt;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @alert;
+  color: @fg;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

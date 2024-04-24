@@ -86,8 +86,14 @@
     # kitty
 
     ## Fonts
+    font-awesome
+    powerline-fonts
+    powerline-symbols
     (nerdfonts.override { fonts = [
+        "NerdFontsSymbolsOnly"
         "FiraCode"
+        "JetBrainsMono"
+        "Hack"
     ];})
 
     ## Browsers
@@ -133,6 +139,7 @@
 
     ## Utilities
     # zathura
+    psmisc
 
     ## Misc
     neofetch

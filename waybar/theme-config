@@ -1,68 +1,170 @@
 {
-	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
-	"modules-center": ["river/tags"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
-	
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
-		"format-muted": "{icon} {volume}%",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
+    "layer": "top",
+    "position": "top",
+    "height": 25,
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-top": 5,
+    "margin-bottom": 0,
+    "spacing": 1,
 
-    "river/tags": {
-		"num-tags": 6
+    // Choose the order of the modules
+
+    "modules-left": ["custom/power", "custom/separator", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "backlight", "pulseaudio", "custom/separator", "tray" ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        //"active-only": false,
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": [],
+         },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰈹",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "󰙯",
+            "10": ""
+            // "urgent": "",
+            // "active": "",
+            // "default": ""
+         },
     },
-	"network": {
-		"tooltip": false,
-		"format-wifi": "  {essid}",
-		"format-ethernet": ""
-	},
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval":1,
-        "on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
-	},
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
     },
-	"tray":{
-		"icon-size":18,
-		"spacing": 10
-	},
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+           "kitty",
+           "wezterm",
+           "foot",
+           "footclient"
+        ],
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5,
+        "show-passive-items": true,
+    },
     "clock": {
-        "format": "{: %I:%M %p   %d/%m/%Y}"
+        "interval": 60,
+        "format": "  {:%a %b %d  %I:%M %p}", // %b %d %Y  --Date formatting
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+   "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "format-critical": "{temperatureC}°C {icon}",
+        "critical-threshold": 80,
+        "interval": 2,
+        "format": "{temperatureC}°C ",
+        "format-icons": ["", "", ""]
     },
     "cpu": {
-        "interval": 15,
-        "format": " {}%",
-        "max-length": 10
+        "interval": 2,
+        "format": "{usage}% ",
+        "tooltip": false
     },
     "memory": {
-        "interval": 30,
-        "format": " {}%",
-        "max-length": 10
+        "interval": 2,
+        "format": "{}% "
     },
-    "custom/launcher":{
-        "format": " ",
+   "disk": {
+        "interval": 15,
+        "format": "{percentage_used}% 󰋊",
     },
-    "custom/power":{
-        "format": " ",
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " :{ipaddr}", //({essid} {signalStrength}%)
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}", //{format_source}",
+        "format-bluetooth": "{volume}% {icon} 󰂯", //{format_source}",
+        "format-bluetooth-muted": "󰖁 {icon} 󰂯", //{format_source}",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󱡒",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+      "format": "{icon}",
+      "format-icons": "",// 󰣇
+      "exec-on-event": "true",
+      "on-click": "~/scripts/sessionMenu",
+      "tooltip": false
+    },
+    "custom/separator": {
+      "format": "{icon}",
+      "format-icons": "|",
+      "tooptip": false,
+    }
 }
+// vim:ft=json
