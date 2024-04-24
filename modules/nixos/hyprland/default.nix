@@ -25,7 +25,10 @@
       swww
 
       # app launcher
-      rofi-wayland
+      # wmctrl
+      # rofi-wayland
+      unstable.fuzzel
+      unstable.tofi
     ];
 
     environment.sessionVariables = {
