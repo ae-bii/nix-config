@@ -32,6 +32,9 @@
 
       # Wireless
       overskride
+
+      # audio
+      pavucontrol
     ];
 
     environment.sessionVariables = {

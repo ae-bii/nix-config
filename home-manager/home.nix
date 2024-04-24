@@ -86,6 +86,7 @@
     # kitty
 
     ## Fonts
+    fira
     font-awesome
     powerline-fonts
     powerline-symbols
