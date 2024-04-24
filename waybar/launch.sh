@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pkill -SIGUSR1 '.waybar'
+pkill -SIGUSR1 '.waybar-wrapped'
 
 
 if [[ $USER = "anu" ]]
