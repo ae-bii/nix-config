@@ -33,18 +33,18 @@
          },
         "format": "{icon}",
         "format-icons": {
-            "1": "󰈹",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "󰙯",
-            "10": ""
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
             // "urgent": "",
-            // "active": "",
+            "active": "",
             // "default": ""
          },
     },
@@ -156,7 +156,7 @@
     },
     "custom/power": {
       "format": "{icon}",
-      "format-icons": "",// 󰣇
+      "format-icons": " ",
       "exec-on-event": "true",
       "on-click": "~/scripts/sessionMenu",
       "tooltip": false
