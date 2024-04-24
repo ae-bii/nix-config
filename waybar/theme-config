@@ -16,7 +16,6 @@
 
 "modules-left": [
 	"custom/menu",
-	"custom/separator#blank_1", 
 	"hyprland/workspaces#pacman",
 	],
 "modules-center": [
@@ -24,11 +23,11 @@
 	],
 "modules-right": [
 	"group/motherboard",
-	// "custom/separator#blank_2",
+	// "custom/separator#blank",
 	"group/laptop",
-	// "custom/separator#blank_2",
+	// "custom/separator#blank",
 	"group/audio",
-	"custom/separator#blank_2",
+	"custom/separator#blank",
 	"custom/power",
 	],
 

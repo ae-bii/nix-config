@@ -188,7 +188,7 @@
       "warning": 30,
       "critical": 15
              },
-    "format": "{icon} {capacity}%",
+    "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% 󱘖",
 	"format-alt-click": "click",
@@ -207,7 +207,7 @@
     "format-connected": "󰂱 {num_connections}",
     "tooltip-format": " {device_alias}",
     "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip-format-enumerate-connected": "{device_alias}  {device_battery_percentage}% 󰂄",
     "tooltip": true,
     "on-click": "overskride",
 },
@@ -215,8 +215,8 @@
 "clock": {
     "interval": 1,
     //"format": " {:%I:%M %p}", // AM PM format
-    "format": "  {:%H:%M:%S}",
-    "format-alt": "  {:%H:%M     %Y, %d %B, %A}",
+    "format": " {:%H:%M:%S}",
+    "format-alt": " {:%H:%M   %Y, %d %B, %A}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"          : "year",
@@ -460,8 +460,8 @@
 },
       
 "custom/menu": {
-    "format": "{}",
-    "exec": "echo ; echo 󱓟 app launcher",
+    "format": "{}",
+    "exec": "echo ; echo app launcher",
     "interval" : 86400, // once every day
     "tooltip": true,
     // "on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
