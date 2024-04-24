@@ -35,6 +35,9 @@
 
       # audio
       pavucontrol
+
+      # cursor
+      phinger-cursors
     ];
 
     environment.sessionVariables = {
