@@ -37,16 +37,5 @@
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-    # prime = { 
-    # # Make sure to use the correct Bus ID values for your system!
-    #   amdgpuBusId = "PCI:7:0:0";
-    #   nvidiaBusId = "PCI:1:0:0";
-    # };
-    #
-    # services.udev.extraHwdb = ''
-    #   evdev:name:*:dmi:bvn*:bvr*:bd*:svnASUS*:pn*:*
-    #     KEYBOARD_KEY_ff31007c=f20
-    # '';
   };
 }
