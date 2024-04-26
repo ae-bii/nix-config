@@ -11,5 +11,5 @@ sudo nixos-rebuild switch --flake .#zero
 ## TODO
 
 - [ ] move hyprland conf to home.nix
-- [ ] add clipboard
+- [x] add clipboard
 - [ ] add screenlock
