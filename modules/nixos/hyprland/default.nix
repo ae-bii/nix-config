@@ -38,6 +38,11 @@
 
       # cursor
       phinger-cursors
+
+      # screenshot
+      grim
+      slurp
+      fuzzel
     ];
 
     environment.sessionVariables = {
