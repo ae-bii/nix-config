@@ -43,6 +43,10 @@
       grim
       slurp
       fuzzel
+
+      # clipboard
+      wl-clipboard
+      cliphist
     ];
 
     environment.sessionVariables = {
