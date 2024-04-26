@@ -103,7 +103,7 @@
     ## Messaging / Social
     discord-canary
     slack
-    zoom-us
+    unstable.zoom-us
 
     ## Music
     spotify
