@@ -42,7 +42,7 @@
       # screenshot
       grim
       slurp
-      fuzzel
+      satty
 
       # clipboard
       wl-clipboard
