@@ -47,6 +47,14 @@
       # clipboard
       wl-clipboard
       cliphist
+
+      # gamma adjustment
+      geoclue2
+      gammastep
+      brightnessctl
+
+      # media control
+      playerctl
     ];
 
     environment.sessionVariables = {
