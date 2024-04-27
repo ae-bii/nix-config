@@ -15,3 +15,4 @@ sudo nixos-rebuild switch --flake .#zero
 - [ ] move mako conf to home.nix
 - [x] add clipboard
 - [ ] add screenlock
+- [ ] sync colors across entire config
