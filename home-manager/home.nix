@@ -107,6 +107,7 @@
 
     ## Music
     spotify
+    audacity
 
     ## Text Editors
     kate
