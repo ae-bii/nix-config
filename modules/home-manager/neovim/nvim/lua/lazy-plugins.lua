@@ -45,7 +45,7 @@ require("lazy").setup({
 	require("config.plugins.autopairs"),
 	-- require 'config.plugins.neo-tree',
 	require("config.plugins.oil"),
-	require("config.plugins.copilot"),
+	-- require("config.plugins.copilot"),
 	require("config.plugins.vimtex"),
 }, {
 	ui = {
