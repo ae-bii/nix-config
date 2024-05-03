@@ -83,9 +83,6 @@
     options = "--delete-older-than 30d";
   };
 
-  # Set your hostname
-  networking.hostName = "zero";
-
   # Be sure to use whatever bootloader you prefer
   boot.loader = {
     efi = {
@@ -100,7 +97,10 @@
   };
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "zero";
+    networkmanager.enable = true;
+  };
 
   # Set your time zone.
   time = {
@@ -160,6 +160,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
@@ -188,6 +189,9 @@
 
   # Enable LD
   # programs.nix-ld.enable = true;
+
+  # Noise Supression
+  programs.noisetorch.enable = true;
 
   # Enable sudo
   security.sudo.enable = true;
