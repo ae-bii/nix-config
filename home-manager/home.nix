@@ -101,8 +101,8 @@
     firefox
 
     ## Messaging / Social
-    discord-canary
-    unstable.webcord-vencord
+    # discord-canary
+    unstable.webcord
     slack
     unstable.zoom-us
 
@@ -143,6 +143,7 @@
     ## Utilities
     # zathura
     psmisc
+    # noisetorch
 
     ## Misc
     neofetch
