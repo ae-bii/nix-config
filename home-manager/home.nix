@@ -147,6 +147,7 @@
 
     ## Misc
     neofetch
+    fastfetch
 
   ];
 
