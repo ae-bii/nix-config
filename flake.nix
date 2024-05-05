@@ -30,6 +30,10 @@
     hyprland = {
       url = "github:hyprwm/Hyprland";
     };
+
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+    };
   };
 
   outputs = {

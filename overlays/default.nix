@@ -10,6 +10,7 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+    zjstatus = inputs.zjstatus.packages.${prev.system}.default;
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
