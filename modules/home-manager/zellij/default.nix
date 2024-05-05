@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+    home.packages = with pkgs; [
+        zjstatus
+    ];
     programs.zellij = {
         enable = true;
         enableZshIntegration = true;
