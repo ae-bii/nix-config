@@ -33,3 +33,4 @@ sudo nixos-rebuild switch --flake .#zero
 - [x] add clipboard
 - [ ] add screenlock
 - [ ] sync colors across entire config
+- [ ] add hosts
