@@ -48,6 +48,17 @@ nvim
 ```
 
 ## Plugins
-
-### TODO: List of plugins
-
+- [alpha](https://github.com/goolord/alpha-nvim)
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [which-key](https://github.com/folke/which-key.nvim)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [conform](https://github.com/stevearc/conform.nvim)
+- [cmp](https://github.com/hrsh7th/nvim-cmp)
+- [todo-comments](https://github.com/folke/todo-comments.nvim)
+- [mini](https://github.com/echasnovski/mini.nvim)
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [autopairs](https://github.com/windwp/nvim-autopairs)
+- [oil](https://github.com/stevearc/oil.nvim)
+- [vimtex](https://github.com/lervag/vimtex)
