@@ -17,7 +17,7 @@
 
       # notification daemon
       # eww
-      mako
+      # mako
 
       libnotify
 

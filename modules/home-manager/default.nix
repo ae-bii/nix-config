@@ -3,6 +3,8 @@
 {
     # List your module files here
     # my-module = import ./my-module.nix;
+    mako = import ./mako.nix;
+
     git = import ./git/default.nix;
     tmux = import ./tmux.nix;
     zellij = import ./zellij/default.nix;

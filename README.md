@@ -29,7 +29,7 @@ sudo nixos-rebuild switch --flake .#zero
 
 - [ ] move hyprland conf to home.nix
 - [ ] move fuzzel conf to home.nix
-- [ ] move mako conf to home.nix
+- [x] move mako conf to home.nix
 - [x] add clipboard
 - [ ] add screenlock
 - [ ] sync colors across entire config

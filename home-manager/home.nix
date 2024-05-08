@@ -12,6 +12,8 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    outputs.homeManagerModules.mako
+
     outputs.homeManagerModules.tmux
     outputs.homeManagerModules.zellij
     outputs.homeManagerModules.git
