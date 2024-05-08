@@ -1,6 +1,23 @@
 # anu's NixOS Configuration
 
-## Install
+## pruned file tree
+```
+.
+├── home-manager
+├── misc
+├── modules
+│   ├── home-manager
+│   │   ├── neovim
+│   │   │   └── nvim
+│   └── nixos
+│       └── hyprland
+├── nixos
+├── overlays
+├── pkgs
+└── waybar
+```
+
+## install
 ```bash
 cd ~
 git clone https://github.com/ae-bii/nix-config.git

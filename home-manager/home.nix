@@ -148,6 +148,7 @@
     ## Misc
     neofetch
     fastfetch
+    tree
 
   ];
 
