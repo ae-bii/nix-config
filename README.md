@@ -26,7 +26,6 @@ sudo nixos-rebuild switch --flake .#zero
 ```
 
 ## TODO
-
 - [ ] move hyprland conf to home.nix
 - [ ] move fuzzel conf to home.nix
 - [x] move mako conf to home.nix
@@ -34,3 +33,7 @@ sudo nixos-rebuild switch --flake .#zero
 - [ ] add screenlock
 - [ ] sync colors across entire config
 - [ ] add hosts
+
+## images
+![Desktop](misc/assets/plain_desktop.png)
+![Neofetch](misc/assets/neofetch.png)
