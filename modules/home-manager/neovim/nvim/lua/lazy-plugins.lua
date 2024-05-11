@@ -47,6 +47,7 @@ require("lazy").setup({
 	require("config.plugins.oil"),
 	-- require("config.plugins.copilot"),
 	require("config.plugins.vimtex"),
+	require("config.plugins.copilotchat"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
