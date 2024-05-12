@@ -103,9 +103,12 @@
   };
 
   # Set your time zone.
+  services.localtimed.enable = true;
+  services.automatic-timezoned.enable = true;
+  location.provider = "geoclue2";
   time = {
     hardwareClockInLocalTime = true;
-    timeZone = "America/New_York";
+    # timeZone = "America/New_York";
   };
 
   # Select internationalisation properties.
