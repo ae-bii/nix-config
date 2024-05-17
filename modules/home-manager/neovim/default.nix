@@ -38,6 +38,7 @@ in
             wget
 
             lua-language-server
+            marksman
             pyright
             ruff-lsp
 

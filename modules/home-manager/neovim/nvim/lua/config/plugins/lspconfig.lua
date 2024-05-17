@@ -215,6 +215,7 @@ return {
 				},
 			})
 			lspconfig.texlab.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
 		end,
 	},
 }
