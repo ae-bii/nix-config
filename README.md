@@ -51,7 +51,7 @@ sudo nixos-rebuild switch --flake .#zero
 ![Neofetch](misc/assets/neofetch.png)
 
 ## todo
-- [ ] move hyprland conf to home.nix
+- [x] move hyprland conf to home.nix
 - [ ] move fuzzel conf to home.nix
 - [x] move mako conf to home.nix
 - [x] add clipboard
