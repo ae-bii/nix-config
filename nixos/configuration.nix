@@ -13,7 +13,6 @@
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
     outputs.nixosModules.nvidia
-    outputs.nixosModules.hyprland
 
     # Or modules from other flakes (such as nixos-hardware):
     inputs.hardware.nixosModules.asus-zephyrus-ga503
@@ -198,6 +197,23 @@
 
   # Enable sudo
   security.sudo.enable = true;
+
+  # Enable hyprland
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+
+    xwayland.enable = true;
+  };
+  environment.sessionVariables = {
+  # WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gtk
+  ];
 
   # Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {

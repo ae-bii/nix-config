@@ -12,6 +12,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    outputs.homeManagerModules.hyprland
     outputs.homeManagerModules.mako
 
     outputs.homeManagerModules.tmux
