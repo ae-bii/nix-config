@@ -105,7 +105,8 @@
 
     ## Messaging / Social
     # discord-canary
-    unstable.webcord
+    # unstable.webcord
+    unstable.vesktop
     slack
     unstable.zoom-us
 
