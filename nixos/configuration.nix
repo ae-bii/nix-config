@@ -210,10 +210,12 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [
-    pkgs.xdg-desktop-portal-gtk
-  ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   # Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {

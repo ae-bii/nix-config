@@ -1,7 +1,7 @@
 { outputs, config, pkgs, lib, ... }:
 
 {
-# Development
+
     home.packages = with pkgs.unstable; [
       (waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
@@ -186,8 +186,7 @@
                     "$mainMod, P, pseudo, # dwindle"
                     # bind = $mainMod, J, togglesplit, # dwindle
                     "$mainMod, F, fullscreen,"
-                    # bind = $mainMod, X, exec, grim -g "$(slurp -o -r -c '#ff0000ff')" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png
-                    # bind = , Print, exec, grim -g "$(slurp -o -r)" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png
+                    "$mainMod SHIFT, S, exec, grim -g \"$(slurp -o -r)\" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png"
                     # bind = , mouse:274, exec, ;
 
                     # Terminal
