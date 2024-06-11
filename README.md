@@ -26,10 +26,10 @@ hello! in this repo, you'll find all of the files for my NixOS config.
 ├── misc
 ├── modules
 │   ├── home-manager
+│   │   ├── hyprland
 │   │   ├── neovim
 │   │   │   └── nvim
 │   └── nixos
-│       └── hyprland
 ├── nixos
 ├── overlays
 ├── pkgs
