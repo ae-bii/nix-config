@@ -195,7 +195,7 @@
                     # Apps
                     "$mainMod, N, exec, dolphin"
                     "$mainMod, B, exec, firefox"
-                    "$mainMod, D, exec, webcord"
+                    "$mainMod, D, exec, vesktop"
 
                     # Rofi
                     "$mainMod, Space, exec, fuzzel"
