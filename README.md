@@ -52,6 +52,7 @@ sudo nixos-rebuild switch --flake .#zero
 
 ## todo
 - [x] move hyprland conf to home.nix
+- [ ] use unstable by default
 - [ ] move fuzzel conf to home.nix
 - [x] move mako conf to home.nix
 - [x] add clipboard
