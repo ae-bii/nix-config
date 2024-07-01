@@ -6,7 +6,7 @@
         userName = "Anupam Bhakta";
         userEmail = "anupambhakta1@gmail.com";
         extraConfig = {
-            init.defaultBranch = "master";
+            init.defaultBranch = "main";
         };
     };
 }
